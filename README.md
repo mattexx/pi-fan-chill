@@ -22,9 +22,9 @@ First install the fan, plugging the blue wire into a GPIO that supports hardware
 drive the fan at 25 kHz. You can use GPIO 12 or 18 with the default script. If you want to use GPIO
 13 or 19 just change the bottom folder in the script to `pwm1`.
 
-Now [download](https://librpip.frasersdev.net/get/download/) and [install]
-(https://librpip.frasersdev.net/get/install/) librpip and enable pwm-init by adding the following
-right before `exit 0` in `/etc/rc.local`:
+Now [download](https://librpip.frasersdev.net/get/download/) and
+[install](https://librpip.frasersdev.net/get/install/) librpip and enable pwm-init by adding the
+following right before `exit 0` in `/etc/rc.local`:
 
     /usr/local/bin/librpip-util/librpip-pwm-init
 
