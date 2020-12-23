@@ -1,0 +1,15 @@
+[Unit]
+Description=PWM fan controller
+After=local-fs.target sysinit.target
+
+[Service]
+User=pi
+Group=gpio
+Nice=0
+KillMode=none
+InaccessibleDirectories=/root /srv -/opt /media -/lost+found
+ExecStart=/home/pi/pi-fan-chill/pwmfan.py &
+ExecStop=/home/pi/pi-fan-chill/pwmfan-kill
+
+[Install]
+WantedBy=default.target
