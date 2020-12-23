@@ -5,9 +5,10 @@ pi 4b.
 
 ## Why
 
-There are many valid use cases for fine-tuned PWM fan control, including with the official pi fan.
-In the case of the official pi fan, I wanted a graded response to CPU temperature instead of the
-on/off implementation supported in Raspbian, since I find the fan a little noisy at 100%.
+PWM fans don't need to be just on or off. In the case of the official pi fan, I wanted to make a
+graded response to CPU temperature instead of the on/off implementation supported in Raspbian. I
+have found that the official pi fan running 25-50% is more than enough to keep the pi at a nice
+temperature as a result.
 
 ## How
 
@@ -28,7 +29,8 @@ following right before `exit 0` in `/etc/rc.local`:
 
     /usr/local/bin/librpip-util/librpip-pwm-init
 
-Next enable GPIO on your desired pin, for example pin 12 (GPIO 18):
+Next enable GPIO on your desired pin, for example for GPIO 18 (pin 12) add the following to
+`/boot/config.txt`:
 
     dtoverlay=pwm,pin=18,func=2
 
@@ -53,3 +55,11 @@ Profit!
 ## Config
 
 Coming soon! For now please edit source as needed.
+
+## References
+
+- [GPIO Programming: Using the sysfs Interface](https://www.ics.com/blog/gpio-programming-using-sysfs-interface)
+- [libprpip](https://librpip.frasersdev.net/)
+- [Device tree
+  readme](https://github.com/raspberrypi/linux/blob/rpi-4.19.y/arch/arm/boot/dts/overlays/README)
+  (useful if you are changing GPIO pins, lookup "pwm")
