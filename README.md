@@ -34,6 +34,10 @@ Next enable GPIO on your desired pin, for example for GPIO 18 (pin 12) add the f
 
     dtoverlay=pwm,pin=18,func=2
 
+Install `psutil`:
+
+    sudo pip install psutil
+
 Clone this project into the pi homedir:
 
     git clone git@github.com:mattexx/pi-fan-chill.git
