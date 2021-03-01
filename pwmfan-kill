@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
 echo "Stopping PWM fan"
-pkill -f "python /home/pi/dev/pi-fan-chill/pwmfan.py &"
+pkill -f "python /home/pi/pi-fan-chill/pwmfan.py &"
 echo 0 > /sys/class/pwm/pwmchip0/pwm0/enable
