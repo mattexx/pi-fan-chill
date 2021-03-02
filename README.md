@@ -34,6 +34,10 @@ Next enable GPIO on your desired pin, for example for GPIO 18 (pin 12) add the f
 
     dtoverlay=pwm,pin=18,func=2
 
+If you are setting up a Pi3, also comment out the line:
+
+     dtparam=audio=on
+
 Install `psutil`:
 
     sudo pip install psutil
