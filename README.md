@@ -36,7 +36,7 @@ Next enable GPIO on your desired pin, for example for GPIO 18 (pin 12) add the f
 
 If you are setting up a Pi3, also comment out the line:
 
-     dtparam=audio=on
+     #dtparam=audio=on
 
 Install `psutil`:
 
