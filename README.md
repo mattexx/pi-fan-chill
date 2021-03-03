@@ -44,7 +44,7 @@ Install `psutil`:
 
 Clone this project into the pi homedir:
 
-    git clone git@github.com:mattexx/pi-fan-chill.git
+    git clone https://github.com/mattexx/pi-fan-chill.git
 
 Copy the service file for systemd:
 
