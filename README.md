@@ -40,7 +40,7 @@ If you are setting up a Pi3, also comment out the line:
 
 Install `psutil`:
 
-    sudo pip install psutil
+    sudo apt-get install python3-psutil
 
 Clone this project into the pi homedir:
 
